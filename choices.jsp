@@ -6,16 +6,18 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 </head>
 <body>
 <form id="logoutForm" method="POST" action="${contextPath}/logout">
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
         </form><h2>Welcome ${pageContext.request.userPrincipal.name}</h2>
-<a onclick="document.forms['logoutForm'].submit()"><label style="font-size: 20px;">Logout</label></a>
+<a onclick="document.forms['logoutForm'].submit()"><p style="color:blue;"><label style="font-size: 20px;">Logout</label></p></a>
 <form action="/redirect" />
 
-<table>
+<table align="center">
 <tr>
 <td>Location :</td><td name="location">${location}</td></tr>
 
@@ -55,7 +57,7 @@
 			<h3>Payment</h3>
 <p>-----------</p>
 <p>-------------</p>
-			<button>Pay</button>
+			<button class="w3-btn w3-black">Pay</button>
 
 <script>
  

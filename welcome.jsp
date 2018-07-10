@@ -14,6 +14,8 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <title>Create an account</title>
 
@@ -34,11 +36,11 @@
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
         </form>
 
-        <h2>Welcome ${pageContext.request.userPrincipal.name} | <a onclick="document.forms['logoutForm'].submit()">Logout</a> | <a href="/profile">Profile</a></h2>
+        <h2><i>Welcome ${pageContext.request.userPrincipal.name}</i> | <a onclick="document.forms['logoutForm'].submit()">Logout</a> | <a href="/profile">Profile</a></h2>
          
 
   <form action="/choices" />
-  <table><tr>
+  <table align="center"><tr>
  <td>Location :</td>
  <td><form:select path="locations" name="locations" required>
             <form:option value="NONE" label="--- Select ---" />
@@ -65,7 +67,7 @@
 			</c:forEach></td></tr> --%>
          </table> 
          
-         <button>Submit</button> 
+         <button class="w3-btn w3-black">Submit</button> 
         <!--  <div id="welcomeDiv"  style="display:none;" class="answer_list" > 
          <br><br>
          WELCOME</div> -->

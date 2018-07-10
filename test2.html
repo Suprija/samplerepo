@@ -6,32 +6,43 @@
   <meta name="Author" content="">
   <meta name="Keywords" content="">
   <meta name="Description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
   <title>Document</title>
+  
  </head>
  <body>
  <form action="test3.html">
-<input type="radio" name="two"  id="first" value=5 data=12  onchange="multiply()" required> 12<br>
-  <input type="radio" name="two" id="second" value=6 data=13 onchange="multiply()" required > 13<br>
-  <input type="radio" name="two"  id="third" value=7 data=0  onchange="multiply()" required> 14<br>
-        <font color='red'> <DIV id="select"> </DIV> </font>
+ <table align="center">
+ <tr><td></td></tr>
+<tr><td><input type="radio" name="two"  id="first" value=5 data=12  onchange="multiply()" required> 12</td>
+  <td><input type="radio" name="two" id="second" value=6 data=13 onchange="multiply()" required > 13</td>
+  <td><input type="radio" name="two"  id="third" value=7 data=0  onchange="multiply()" required> 14</td>
+        <td><font color='red'> <DIV id="select"> </DIV> </font></td>
 
-	<font color='red'> <DIV id="housefull"> </DIV> </font>
+	<td><font color='red'> <DIV id="housefull"> </DIV> </font></td></tr>
 
 
 
-  <select name="one" id="one" onchange="multiply()" required>
+  <tr><td>Select :</td>
+  <td><select name="one" id="one" onchange="multiply()" required>
   <option value="">Select</option>
   <option value=15 >15</option>
   <option value=16 >16</option>
   <option value=3 >3</option>
   <option value=1 >1</option>
-</select>
-  <font color='red'> <DIV id="une"> </DIV> </font>
-<table> <tr><td id="pricedesc">Price to be paid :</td>
+</select></td>
+</tr>
+
+  <tr><td></td><td><font color='red'> <DIV id="une"> </DIV> </font></td></td>
+<tr><td id="pricedesc">Price to be paid :</td>
 						<td id="price"></td>
 						</tr>
+  
+  <tr><td><button class="w3-btn w3-black">Submit</button></td></tr>
   </table>
-  <button >Submit</button>
   
  <script>
  
