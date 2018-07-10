@@ -9,9 +9,17 @@
   <title>Document</title>
  </head>
  <body>
-<input type="radio" name="two"  id="first" value=5 data=12 checked onchange="multiply()"> 12<br>
-  <input type="radio" name="two" id="second" value=6 data=13 onchange="multiply()"> 13<br>
-  <select name="one" id="one" onchange="multiply()" >
+ <form action="test3.html">
+<input type="radio" name="two"  id="first" value=5 data=12  onchange="multiply()" required> 12<br>
+  <input type="radio" name="two" id="second" value=6 data=13 onchange="multiply()" required > 13<br>
+  <input type="radio" name="two"  id="third" value=7 data=0  onchange="multiply()" required> 14<br>
+        <font color='red'> <DIV id="select"> </DIV> </font>
+
+	<font color='red'> <DIV id="housefull"> </DIV> </font>
+
+
+
+  <select name="one" id="one" onchange="multiply()" required>
   <option value="">Select</option>
   <option value=15 >15</option>
   <option value=16 >16</option>
@@ -23,6 +31,8 @@
 						<td id="price"></td>
 						</tr>
   </table>
+  <button >Submit</button>
+  
  <script>
  
  function multiply()
@@ -31,7 +41,17 @@
 	if (document.getElementById('first').checked) {
 		var rate = parseInt(document.getElementById('first').getAttribute("data"));
 		//var rate = document.getElementById('first').value;
-		if(one.value>rate)
+		if(rate==0)
+	{
+					document.getElementById('housefull').innerHTML = "Housefull";
+					document.getElementById("first").checked = false;
+
+
+	}
+	else {					document.getElementById('housefull').innerHTML = "";
+
+}
+		 if(one.value>rate)
 		{
 			//alert("Wrong");
 			document.getElementById('une').innerHTML = "More not allowed";
@@ -52,7 +72,17 @@
 else if (document.getElementById('second').checked) {
 		var rate = parseInt(document.getElementById('second').getAttribute("data"));
 		//var rate = document.getElementById('second').value;
-		if(one.value>rate)
+		if(rate==0)
+	{
+					document.getElementById('housefull').innerHTML = "Housefull";
+										document.getElementById("second").checked = false;
+
+
+	}
+	else {					document.getElementById('housefull').innerHTML = "";
+
+}
+		 if(one.value>rate)
 		{
 			//alert("Wrong");
 			document.getElementById('une').innerHTML = "More not allowed";
@@ -69,12 +99,55 @@ else if (document.getElementById('second').checked) {
 		}
 
 }
+else if (document.getElementById('third').checked) {
+		var rate = parseInt(document.getElementById('third').getAttribute("data"));
+		//var rate = document.getElementById('first').value;
+		if(rate==0)
+	{
+					document.getElementById('housefull').innerHTML = "Housefull";
+										document.getElementById("third").checked = false;
+}
+else {					document.getElementById('housefull').innerHTML = "";
+
+}
+		 if(one.value>rate)
+		{
+			//alert("Wrong");
+			document.getElementById('une').innerHTML = "More not allowed";
+			one.value="";
+					document.getElementById("price").innerHTML="";
+
+			//one.focus();
+		}
+		else if(one.value<=rate)
+		{
+					document.getElementById('une').innerHTML = "";
+
+		var price=one.value * rate;
+		document.getElementById("price").innerHTML=""+price;
+		}
+
+}
+
 else 
 {
+document.getElementById("price").innerHTML="";
+}
+}
+/*function radiocheck()
+{
+	if( document.getElementById("first").checked == false && document.getElementById("second").checked == false && document.getElementById("third").checked == false )
+	{
+					//document.getElementById("select").innerHTML="Select a movie";
+					//alert("select movie");
+					var ele = document.getElementsByName("two");
+   for(var i=0;i<ele.length;i++)
+      ele[i].checked = false;
 
-	document.getElementById("price").innerHTML="";
-}
-}
+	}
+	}*/
+
  </script>
+ <body>
  </body>
 </html>
