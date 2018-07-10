@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+ <center>
+<table border="1" >
+<tr>
+<td>
+<form name = "registerationform" method="POST" action="test.html" onsubmit="return(regvalidate())">
+<table>
+<tr>
+<td>First Name: </td> <td><input type = "text" name="fnametxt" /><br/> </td>
+</tr>
+<tr>
+<td>Second Name: </td> <td> <input type = "text" name="snametxt" /><br/></td>
+</tr>
+<tr>
+<td> User Name:</td> <td><input type = "text" name="unametxt" /><br/> </td>
+</tr>
+<tr>
+<td>Email Address: </td> <td> <input type = "text" name="emailtxt" /><br/></td>
+</tr>
+</tr>
+<tr>
+<td> Password : </td> <td> <input type = "password" name="pwdtxt" /> <br/> </td>
+</tr>
+</tr>
+<tr>
+<td> Confirm : </td> <td> <input type = "password" name="cpwdtxt" /> <br/> </td>
+</tr>
+</table>
+<font color='red'> <DIV id="une"> </DIV> </font>
+<input type = "submit" value="Register Now" />
+</form>
+</td>
+</th>
+</tr>
+</table>
+</tr>
+</table>
+</tr>
+<SCRIPT type="Text/JavaScript">
+function regvalidate()
+
+{
+if((document.registerationform.fnametxt.value=="")&&(document.registerationform.snametxt.value==""))
+ {
+  document.getElementById('une').innerHTML = "First name or Second name should not be empty";
+  registerationform.fnametxt.focus();
+  return(false);
+ }
+
+if(document.registerationform.unametxt.value=="")
+  {
+  document.getElementById('une').innerHTML = "User name field should not be empty";
+  registerationform.unametxt.focus();
+  return(false);
+ }
+
+if(document.registerationform.emailtxt.value=="")
+  {
+  document.getElementById('une').innerHTML = "Email id requered";
+  registerationform.emailtxt.focus();
+  return(false);
+  }
+
+if(document.registerationform.pwdtxt.value=="")
+   {
+  document.getElementById('une').innerHTML = "Please type a password";
+  registerationform.pwdtxt.focus();
+  return(false);
+   }
+
+if((document.registerationform.pwdtxt.value) != (document.registerationform.cpwdtxt.value))
+   {
+  document.getElementById('une').innerHTML = "Password Must be equal";
+  registerationform.pwdtxt.value = "";
+  registerationform.cpwdtxt.value = "";
+  registerationform.pwdtxt.focus();
+  return(false);
+  }
+else
+   {
+   return(true);
+   }
+}
+</SCRIPT>
+</td>
+</tr>
+</table>
+</center>
+ <!-- <form id="form">
+    <p>name</p>
+    <input type="text" id="firstname" name="firstname" /> <span id="errorname"></span>
+
+    <br/>
+    <input type="submit" value="Submit" />
+</form>
+<script>
+var form = document.getElementById('form'),
+    firstName= document.getElementById('firstname'),
+    errorMessage = document.getElementById('errorname');
+
+function check(event) {
+    event.preventDefault();
+    if (firstName.value === '' || !firstName.value.length || firstName.value.length<4) {
+        console.log('here')
+        errorMessage.innerText = 'This is an invalid name';
+    } else {
+        errorMessage.innerText = '';
+    }
+}
+
+form.addEventListener('submit', check);
+</script>-->
+ </body>
+</html>

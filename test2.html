@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+<input type="radio" name="two"  id="first" value=5 data=12 checked onchange="multiply()"> 12<br>
+  <input type="radio" name="two" id="second" value=6 data=13 onchange="multiply()"> 13<br>
+  <select name="one" id="one" onchange="multiply()" >
+  <option value="">Select</option>
+  <option value=15 >15</option>
+  <option value=16 >16</option>
+  <option value=3 >3</option>
+  <option value=1 >1</option>
+</select>
+  <font color='red'> <DIV id="une"> </DIV> </font>
+<table> <tr><td id="pricedesc">Price to be paid :</td>
+						<td id="price"></td>
+						</tr>
+  </table>
+ <script>
+ 
+ function multiply()
+ {
+	 var one=document.getElementById("one");
+	if (document.getElementById('first').checked) {
+		var rate = parseInt(document.getElementById('first').getAttribute("data"));
+		//var rate = document.getElementById('first').value;
+		if(one.value>rate)
+		{
+			//alert("Wrong");
+			document.getElementById('une').innerHTML = "More not allowed";
+			one.value="";
+					document.getElementById("price").innerHTML="";
+
+			//one.focus();
+		}
+		else if(one.value<=rate)
+		{
+					document.getElementById('une').innerHTML = "";
+
+		var price=one.value * rate;
+		document.getElementById("price").innerHTML=""+price;
+		}
+
+}
+else if (document.getElementById('second').checked) {
+		var rate = parseInt(document.getElementById('second').getAttribute("data"));
+		//var rate = document.getElementById('second').value;
+		if(one.value>rate)
+		{
+			//alert("Wrong");
+			document.getElementById('une').innerHTML = "More not allowed";
+			one.value="";
+								document.getElementById("price").innerHTML="";
+
+			//one.focus();
+		}
+		else if(one.value<=rate)
+		{
+					document.getElementById('une').innerHTML = "";
+					var price=one.value * rate;
+					document.getElementById("price").innerHTML=""+price;
+		}
+
+}
+else 
+{
+
+	document.getElementById("price").innerHTML="";
+}
+}
+ </script>
+ </body>
+</html>

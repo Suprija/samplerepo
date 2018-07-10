@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+  <input type="text" id="text" onblur="myFunction()">
+  <font color='red'> <DIV id="une"> </DIV> </font>
+  <script>
+  function myFunction()
+  {
+	  var tickets=document.getElementById("text");
+	  if(tickets.value<5)
+ {
+  document.getElementById('une').innerHTML = "More not allowed";
+  tickets.value="";
+  tickets.focus();
+  //return(false);
+	  
+	  
+	  //var tickets=document.getElementById("text").value;
+	  //if(tickets<5)
+	  //alert("Hi"+document.getElementById("text").value);
+  }
+  }
+  </script>
+ </body>
+</html>
