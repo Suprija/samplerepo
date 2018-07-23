@@ -1,0 +1,32 @@
+Suprija - FEEDBACK:
+--------------------------
+Tag Checked: v3
+
+* GOOD JOB!
+* Class Design is good.
+
+--- QUESTIONS ---
+* Git tags - where have they been created from (branch info)? How was it created?
+	-> We don't have to tag frequently. Tags are done only when we are freezing the development & releasing something.
+
+--- IMPROVEMENT AREAS ---
+
+* Meaningful Git Commit Messages (not too lengthy but brief & meaningful)
+* Meaningful artifact name in pom.xml. This controls the war file name and thereby your application name.
+* Some kind of a status page after payment would have been nice (with a Home link).
+* Profile page doesn't seem to be appropriate title.
+* You don't have to have a member for PasswordConfirm.
+* Code formatting can be consistent.
+* No hard-coding of data in classes including test classes. Tests fail because of this.
+* Add Comments to the Java Class and Methods following javadoc standards.
+* Some failure cases could have been handled, like movie running house-full
+
+///////////
+
+* Need to add more UTs.
+
+///////////
+PENDING FROM MY SIDE FOR EVALUATION:
+* Jenkins pipeline. Can you please share the config and email notificaiton?
+* To review the Documentation.
+-----------------------------------------------------------------------------------------------------------
