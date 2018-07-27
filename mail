@@ -1,4 +1,3 @@
-Hi Neelima –
 Can you please help catch-up Suprija with whatever you have done so far in the following order:
 
 (a)	Load Testing for application services
@@ -9,7 +8,20 @@ Can you please help catch-up Suprija with whatever you have done so far in the f
 
 Please feel free to juggle the order, add/modify items from the above list.
 
-Let me know if you have any queries.
 
-Thanks,
--Karthik
+
+
+
+
+
+(a)	Load Testing for application services
+(b)	Performance (response time) for app-services
+(c)	Update Test Evidence Results document on performance Testing
+(d)	Core Platform Integration Testing Automation
+(e)	App-services Integration Testing Automation
+(f)	Prepare Test result evidence document for Core Platform Integration Testing
+
+
+@ Suprija: let catch up tomorrow  and discuss on Load Testing for application services ,meanwhile please go through Junit Tutorials .Hope below link would be helpful
+“https://www.youtube.com/channel/UCTt7pyY-o0eltq14glaG5dg/playlists?shelf_id=4&view=50&sort=dd
+
